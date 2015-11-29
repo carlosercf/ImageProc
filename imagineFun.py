@@ -100,5 +100,5 @@ menu = {
     115 : save,      # s
     103 : bwconvert, # g
     98 : darken,     # b
-    105 : lighten   # i
+    105 : lighten    # i
     }

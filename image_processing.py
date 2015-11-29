@@ -34,30 +34,25 @@ def inverse(pixel):
 
 #Subtracts each RGB by 10
 def dark(pixel):
-    if(pixel[0] < 10):
-        pixel[0] = 0
-    elif(pixel[1] < 10):
-        pixel[1] = 0
-    elif(pixel[2] < 10):
-        pixel[2] = 0
-    else:
-        pixel[0] = pixel[0] - 10
-        pixel[1] = pixel[1] - 10
-        pixel[2] = pixel[2] - 10
+    for i in range(1,10):
+
+        if(pixel[0] > 0):
+            pixel[0] = pixel[0] - 1
+        if(pixel[1] > 0 ):
+            pixel[1] = pixel[1] - 1
+        if(pixel[2] > 0):
+            pixel[2] = pixel[2] - 1
     return(pixel[0],pixel[1],pixel[2])
 
 #Add 10 to each RGB on the image
 def light(pixel):
-    if(pixel[0] > 245):
-        pixel[0] = 255
-    elif(pixel[1] > 245):
-        pixel[1] = 255
-    elif(pixel[2] > 245):
-        pixel[2] = 255
-    else:
-        pixel[0] = pixel[0] + 10
-        pixel[1] = pixel[1] + 10
-        pixel[2] = pixel[2] + 10
+    for i in range(1, 10):
+        if(pixel[0] < 255):
+            pixel[0] =  pixel[0] + 1
+        if(pixel[1] < 255):
+            pixel[1] = pixel[1] + 1
+        if(pixel[2] < 255):
+            pixel[2] = pixel[2] + 1
     return(pixel[0],pixel[1],pixel[2])
 
 # intensify: pixel -> nat255 -> pixel
